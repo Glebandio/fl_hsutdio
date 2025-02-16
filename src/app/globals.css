@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f6f5fa;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -5px, 0);
+  }
+}
+
+/* @keyframes float { */
+/*   0% { */
+/*     transform: translate(0px, 0px); */
+/*   } */
+/*   50% { */
+/*     transform: translate(0px, -10px); */
+/*   } */
+/*   100% { */
+/*     transform: translate(0px, 0px); */
+/*   } */
+/* } */
+
+/* .scale-primary { */
+/*   animation: scalePrimary 4s ease-in-out infinite; */
+/* } */
+
+/* .scale-secondary { */
+/*   animation: scaleSecondary 4s ease-in-out infinite; */
+/* } */
+
+@keyframes scalePrimary {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes scaleSecondary {
+  0%,
+  100% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #dcff1e 6.5%,
+    #ff6e00 35.5%,
+    #e6d2ff 62.5%,
+    #96c8ff 91%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 0.2em;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee2 {
+  animation: marquee2 20s linear infinite;
+}
+
+/* @keyframes inOut { */
+/*   0%, */
+/*   100% { */
+/*     transform: scaleX(1); */
+/*   } */
+/*   50% { */
+/*     transform: scaleX(0.9); */
+/*   } */
+/* } */
+
+/* @keyframes outIn { */
+/*   0%, */
+/*   100% { */
+/*     transform: scaleX(0.9); */
+/*   } */
+/*   50% { */
+/*     transform: scaleX(1); */
+/*   } */
+/* } */
+
+/* .animate-in-out { */
+/*   animation: inOut 3s infinite ease-in-out; */
+/*   transform-origin: center left; */
+/* } */
+
+/* .animate-out-in { */
+/*   animation: outIn 3s infinite ease-in-out; */
+/*   transform-origin: center left; */
+/* } */
+
+.blur-card {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.blur-card::after {
+  content: '';
+  position: absolute;
+  /* inset: 0; /1* Shorthand for top/right/bottom/left: 0 *1/ */
+  /* backdrop-filter: blur(150px); */
+  /* -webkit-backdrop-filter: blur(150px); */
+  /* background: rgba(255, 255, 255, 0.01); /1* Almost transparent background *1/ */
+  /* background: red !important; */
+  /* z-index: 0; /1* Keep it above background but below content *1/ */
+
+  inset: 10%;
+  z-index: -1;
+  filter: blur(18px);
+  background-color: rgba(35, 35, 35, 1);
+}
+
+/* Dark theme variation */
+.blur-card.card--dark::before {
+  background: rgba(0, 0, 0, 0.01); /* Dark version */
+}
+
+/* /1* Ensure content stays above the blur *1/ */
+/* .blur-card > * { */
+/*   position: relative; */
+/*   /1* z-index: 1; *1/ */
+/* } */
+
+.cookies-container {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 4px 16px 0px rgba(57, 73, 98, 0.16);
+  backdrop-filter: blur(20px);
+}

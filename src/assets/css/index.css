@@ -1,0 +1,50 @@
+.mobile-menu-container::before {
+  content: '';
+  position: absolute;
+  border-radius: 20px;
+  padding: 1px;
+  /* Diagonal gradient from bottom-left [11px, calc(100% - 20px)] 
+   to top-right [calc(100% - 15px), 24px] at 33deg */
+  background: linear-gradient(
+    33deg,
+    rgba(255, 255, 255, 0.6) 11px,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.6) calc(100% - 20px)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.6) 16px,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.6) calc(100% - 16px)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .card::before {
+    border-radius: 32px; /* Larger border-radius for tablet and above */
+  }
+}
+
+.card--dark::before {
+  opacity: 30%;
+}
