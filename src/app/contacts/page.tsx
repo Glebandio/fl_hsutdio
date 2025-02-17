@@ -26,10 +26,10 @@ const ContactForm = () => (
   "
   >
     <h1 className="text-[42px] lg:text-[64px] font-host leading-none font-medium mb-[40px]">
-      Let's <span className="text-orange">talk</span> about
+      Let's <span className="text-orange">talk</span> about your project!
       <br className="block lg:hidden lg:block" />
       <span className="hidden lg:inline-block lg:hidden w-[11px]" />
-      your project!
+
     </h1>
 
     <div className="flex flex-col gap-y-[10px] mb-[40px]">
