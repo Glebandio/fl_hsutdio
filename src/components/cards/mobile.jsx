@@ -32,7 +32,11 @@ const Cards = ({ cards }) => {
     })
 
     // First card starts in view
-    cardMetrics[0].scrollHeight = cardMetrics[0].contentScrollHeight
+
+
+    cardMetrics[1].scrollHeight = cardMetrics[1].contentScrollHeight
+
+
 
     // Calculate total scroll height
     totalHeight = cardMetrics.reduce((sum, m) => sum + m.scrollHeight, 0)

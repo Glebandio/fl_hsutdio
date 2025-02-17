@@ -108,7 +108,7 @@ const ClientCard = ({ client }) => {
       {/* Card */}
       <div
         onClick={() => setIsOpen(true)}
-        className="rounded-[20px] md:rounded-[32px] aspect-square w-full cursor-pointer min-h-[525px] _min-h-[450px] lg:min-h-unset"
+        className="rounded-[20px] md:rounded-[32px] aspect-square w-full cursor-pointer min-h-[450px] lg:min-h-[680px]"
       >
         <div className="w-full h-full rounded-[20px] lg:rounded-[32px] overflow-hidden relative">
           {client.bgImg && (
@@ -299,10 +299,10 @@ const ClientCard = ({ client }) => {
 
 const Title = () => (
   <h2 className="font-host font-medium leading-[83%] text-[58px] md:text-[96px] text-center mb-[80px] md:mb-[60px] mx-[20px] lg:mx-[0px]">
-    Examples of our
+    Examples of&nbsp;our
     <br className="hidden lg:block" />
     <span className="inline-block lg:hidden w-[11px]" />
-    expertise in action
+    expertise in&nbsp;action
   </h2>
 )
 
