@@ -5,7 +5,7 @@ const ContactsPage = () => {
     <div className="flex flex-col relative w-full">
       <div
         className={`
-          flex flex-col gap-y-[140px] mb-[140px]
+          flex flex-col gap-x-[260px] gap-y-[140px] mb-[140px]
           lg:flex-row lg:justify-between lg:items-center lg:mb-[80x] lg:gap-y-[0px]
           lg:pl-[30px] lg:pr-[64px]
           pl-[25px] pr-[25px]

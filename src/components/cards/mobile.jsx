@@ -20,7 +20,7 @@ const Cards = ({ cards }) => {
       // How much we need to scroll to see the full card
       const contentScrollHeight = Math.max(
         0,
-        card.innerBlockHeight + 560 - viewportHeight
+        card.innerBlockHeight  - viewportHeight
       )
 
       return {
@@ -34,12 +34,11 @@ const Cards = ({ cards }) => {
     // First card starts in view
 
 
-    cardMetrics[1].scrollHeight = cardMetrics[1].contentScrollHeight
-
+    cardMetrics[0].scrollHeight = cardMetrics[0].contentScrollHeight
 
 
     // Calculate total scroll height
-    totalHeight = cardMetrics.reduce((sum, m) => sum + m.scrollHeight, 0)
+    totalHeight = cardMetrics.reduce((sum, m) => sum + m.scrollHeight , 0)
 
     // Calculate scroll positions
     let accumulatedHeight = 0
@@ -111,19 +110,22 @@ const MobileCard = ({ card, scrollYProgress, metrics, index }) => {
   const isDark = card.bg === 'cardDark'
 
   return (
-    <motion.div
-      className={`bg-${card.bg} absolute inset-0 rounded-t-[20px]`}
-      style={{ y }}
-    >
-      <motion.img
-        src={`/img/mobile-covers/${card.pic}`}
-        className="absolute top-0 w-full"
-        alt={card.title}
-      />
-      <CardNumber number={index + 1} />
-      <motion.div className="w-full h-full" style={{ y: cardY }}>
-        <div
-          className={`
+      <motion.div
+          className={`bg-${card.bg} absolute inset-0 rounded-t-[20px]`}
+          style={{y}}
+      >
+        <motion.img
+            src={`/img/mobile-covers/${card.pic}`}
+            className="absolute top-0 w-full"
+            alt={card.title}
+        />
+        <CardNumber number={index + 1}/>
+        <motion.div
+            className="w-full h-full"
+            style={index === 0 ?{y: cardY} : {} } // Только первый остается без transform
+        >
+          <div
+              className={`
             flex flex-col
             card
             _blur-card
@@ -143,24 +145,24 @@ const MobileCard = ({ card, scrollYProgress, metrics, index }) => {
             md:pb-[46px]
             ${isDark ? 'bg-[#FFFFFF05] text-white' : 'bg-[#FFFFFF20] text-black'}
           `}
-          style={{
-            height: card.innerBlockHeight,
-            top: 560,
-            background: isDark
-              ? 'hsla(0, 0%, 100%, .05)'
-              : 'hsla(0, 0%, 100%, .2)',
-          }}
-        >
-          <InnerCard card={card.card} title={card.title} isDark={isDark} />
-        </div>
+              style={{
+                height: card.innerBlockHeight,
+                top: 560,
+                background: isDark
+                    ? 'hsla(0, 0%, 100%, .05)'
+                    : 'hsla(0, 0%, 100%, .2)',
+              }}
+          >
+            <InnerCard card={card.card} title={card.title} isDark={isDark}/>
+          </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
   )
 }
 
-export const InnerCard = ({ card, title, isDark }) => {
+export const InnerCard = ({card, title, isDark}) => {
   return (
-    <div className="flex flex-col gap-y-[40px] relative">
+      <div className="flex flex-col gap-y-[40px] relative">
       <div
         className={`
           absolute
