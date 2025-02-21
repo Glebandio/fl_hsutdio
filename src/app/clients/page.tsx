@@ -198,7 +198,7 @@ const ClientCard = ({ client }) => {
                     <div className="w-full md:w-1/2 relative aspect-square md:aspect-auto">
                       {client.contentImg ? (
                         <img
-                          src={client.contentImg}
+                          src={client.cardDesktop}
                           alt={client.name}
                           className="w-full h-full object-cover"
                         />
@@ -207,7 +207,7 @@ const ClientCard = ({ client }) => {
                           className={`w-full h-full ${client.bgImg ? 'bg-cover bg-center' : 'bg-gradient-to-br from-gray-100 to-gray-200'}`}
                           style={
                             client.bgImg
-                              ? { backgroundImage: `url(${client.bgImg})` }
+                              ? { backgroundImage: `url(${client.cardDesktop})` }
                               : {}
                           }
                         />

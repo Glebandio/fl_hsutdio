@@ -5,7 +5,7 @@ const ContactsPage = () => {
     <div className="flex flex-col relative w-full">
       <div
         className={`
-          flex flex-col gap-x-[260px] gap-y-[140px] mb-[140px]
+          flex flex-col gap-x-[100px] xl:gap-x-[260px] gap-y-[140px] mb-[140px]
           lg:flex-row lg:justify-between lg:items-center lg:mb-[80x] lg:gap-y-[0px]
           lg:pl-[30px] lg:pr-[64px]
           pl-[25px] pr-[25px]
@@ -91,7 +91,7 @@ const Address = () => (
         <div className="flex flex-col items-center lg:flex-row gap-y-[30px] gap-x-[30px]">
             <button
                 type="submit"
-                className="py-[21px] px-[72px] font-host text-[20px] font-medium leading-none bg-black rounded-full text-white w-full lg:w-max"
+                className="py-[21px] px-[72px] font-host text-[20px] whitespace-nowrap font-medium leading-none bg-black rounded-full text-white w-full lg:w-max"
             >
                 schedule a call
             </button>
