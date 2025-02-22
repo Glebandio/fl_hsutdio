@@ -132,7 +132,7 @@ const Footer = () => {
           About us
         </Link>
         <Link
-          href="/"
+          href="/terms"
           className="text-black hover:text-black/50 hover:underline text-[14px] font-host font-medium leading-none hover:no-underline"
         >
           Terms of Service
@@ -145,7 +145,7 @@ const Footer = () => {
         </Link>
 
         <Link
-          href="/#"
+          href="/privacy"
           className="text-black hover:text-black/50 hover:underline text-[14px] font-host font-medium leading-none hover:no-underline"
         >
           Privacy Policy
