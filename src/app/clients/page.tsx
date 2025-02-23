@@ -11,6 +11,7 @@ import Footer from '@/components/footer'
 const ClientsPage: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All')
 
+
   const categories = [
     {
       text: 'All',

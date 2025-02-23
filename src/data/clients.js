@@ -38,7 +38,7 @@ export const clients = [
     logo: '/img/clients/logos_x2/logo-1.png',
     name: 'VTB — Data Streaming System',
     bgImg: '/img/clients/gradients/2.jpeg',
-    cardDesktop: '/img/clients/logos_x2/logo-1.png',
+    cardDesktop: '/img/clients/gradients/2.jpeg',
     bgStyle: '',
     categories: ['Backend Solutions', 'DevOps & Automation'],
     tags: [
@@ -107,6 +107,7 @@ export const clients = [
     name: 'Societe Generale — Personalized Advertising Banner Service',
     bgImg: '/img/clients/bg/bg-4.png',
     bgStyle: '',
+    cardDesktop: '/img/clients/bg/bg-4.png',
     categories: ['Web & Mobile Application', 'DevOps & Automation'],
     contentImg: '',
     tags: [
